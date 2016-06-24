@@ -8,6 +8,7 @@ env:
   global:
     - FOO=FUBU
     - M2=two
+    
 
   matrix:
     - M1=ONE
@@ -23,6 +24,7 @@ build:
   ci:
     - ps -eax
     - ls -al
+    - echo $COMMITTER and $LAST_AUTHOR and $COMMIT_MESSAGE
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
